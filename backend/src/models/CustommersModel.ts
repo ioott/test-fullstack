@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { Custommer } from "../interfaces/Custommer";
+import { CreateCustommer } from "../interfaces/CreateCustommer";
 
 const model = new PrismaClient().custommer;
 
@@ -8,7 +9,7 @@ async function allCustommers(): Promise<Custommer[]> {
   return custommers;
 }
 
-async function createCustommer(data: Custommer): Promise<Custommer> {
+async function createCustommer(data: CreateCustommer): Promise<Custommer> {
   const custommer = await model.create({
     data: {
       name: data.name,

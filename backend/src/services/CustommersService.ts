@@ -2,6 +2,7 @@ import ServiceResponse, { StatusNames } from '../utils/ServiceResponse';
 import { Custommer } from '../interfaces/Custommer';
 import custommerModel from '../models/CustommersModel';
 import mapCustommerError from '../utils/mapCreationCustommersError';
+import { CreateCustommer } from '../interfaces/CreateCustommer';
 
 export async function allCustommers(): Promise<ServiceResponse<object>> {
   try {
@@ -12,7 +13,7 @@ export async function allCustommers(): Promise<ServiceResponse<object>> {
   }
 }
 
-export async function createCustommer(data: Custommer): Promise<ServiceResponse> {
+export async function createCustommer(data: CreateCustommer): Promise<ServiceResponse> {
   try {
     const custommerToCreate = {...data};
     await custommerModel.createCustommer(custommerToCreate);
