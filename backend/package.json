@@ -11,7 +11,8 @@
         "start": "node ./build/server.js",
         "predev": "npm run db:init",
         "dev": "tsnd --watch \"./src/**\" --transpile-only ./src/server.ts",
-        "generate-schema": "npx prisma generate"
+        "generate-schema": "npx prisma generate",
+        "test": "jest"
     },
     "keywords": [],
     "author": "vania ioott",
@@ -23,12 +24,8 @@
         "@types/validator": "13.6.6",
         "@typescript-eslint/eslint-plugin": "^6.2.0",
         "@typescript-eslint/parser": "^6.2.0",
-        "chai": "^4.4.1",
-        "chai-http": "^4.4.0",
-        "mocha": "^10.3.0",
-        "prisma": "^5.9.1",
-        "sinon": "^17.0.1",
-        "sinon-chai": "^3.7.0",
+        "@types/jest": "^29.5.12",
+        "jest": "^27.5.0",
         "ts-node": "^10.9.2",
         "ts-node-dev": "^2.0.0",
         "typescript": "^5.3.3"
@@ -39,7 +36,7 @@
         "dotenv": "^16.4.4",
         "express": "^4.18.3",
         "helmet": "^7.1.0",
-        "joi": "^17.12.1",
-        "ts-loader": "^9.5.1"
+        "ts-loader": "^9.5.1",
+        "joi": "^17.12.2"
     }
 }
