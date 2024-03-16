@@ -28,11 +28,11 @@ export const mockedData = {
       statusCode: 201,
       data: 'Cliente cadastrado com sucesso'
   },
-  custommerToCreate:{
+  custommerToCreateOrUpdate:{
         name: 'Jane Doe',
         email: 'jane@example.com',
         cpf: '987.654.321-00',
-        phoneNumber: '123-456-7890',
+        phoneNumber: '1234567890',
         status: true,
   },
   updateCustommer: {
